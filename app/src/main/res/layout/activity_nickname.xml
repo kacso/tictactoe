@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+
+    <androidx.appcompat.widget.AppCompatTextView android:layout_width="wrap_content"
+                                                 android:layout_height="wrap_content"
+                                                 android:text="@string/lbl_set_nickname"
+                                                 app:layout_constraintTop_toTopOf="parent"
+                                                 app:layout_constraintStart_toStartOf="parent"
+                                                 android:layout_marginTop="40dp"
+                                                 android:textColor="@color/textColorPrimary"
+                                                 android:padding="18sp"
+                                                 android:id="@+id/nicknameLbl"/>
+
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+                                                           android:layout_height="wrap_content"
+                                                           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                                           app:layout_constraintTop_toBottomOf="@+id/nicknameLbl"
+                                                           app:layout_constraintStart_toStartOf="parent"
+                                                           android:id="@+id/nicknameInputLayout"
+                                                           android:textColorHint="@color/textColorSecondary"
+                                                           app:hintTextColor="@color/textColorSecondary"
+                                                           android:hint="@string/hint_nickname"
+                                                           android:paddingBottom="16dp"
+                                                           app:boxCornerRadiusBottomEnd="4dp"
+                                                           app:boxCornerRadiusBottomStart="4dp"
+                                                           app:boxCornerRadiusTopEnd="4dp"
+                                                           app:boxCornerRadiusTopStart="4dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nicknameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text|textAutoComplete|textAutoCorrect"
+                android:textColor="@color/textColorSecondary"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:id="@+id/nextBtn"
+                                                       android:text="@string/btn_continue"
+                                                       app:layout_constraintStart_toStartOf="parent"
+                                                       app:layout_constraintTop_toBottomOf="@id/nicknameInputLayout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

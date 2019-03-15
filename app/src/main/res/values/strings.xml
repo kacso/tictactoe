@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tic-Tac-Toe</string>
+    <string name="mode_single_player">Single player</string>
+    <string name="mode__2_players_offline">2 players offline</string>
+    <string name="mode__2_players_online">2 players online</string>
+    <string name="title_leaderboard">Leaderboard</string>
+    <string name="btn_continue">Continue</string>
+    <string name="hint_nickname">Nickname</string>
+    <string name="lbl_set_nickname">Please enter your nickname:</string>
+    <string name="game_finished_draw">Game finished with draw</string>
+    <string name="game_winner">Winner is %1$s</string>
+</resources>

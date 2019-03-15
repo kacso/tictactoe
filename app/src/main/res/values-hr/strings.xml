@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Križić kružić</string>
+    <string name="mode_single_player">Jedan igrač</string>
+    <string name="mode__2_players_offline">Dva igrača - offline</string>
+    <string name="mode__2_players_online">Dva igrača - online</string>
+    <string name="title_leaderboard">Poredak</string>
+    <string name="btn_continue">Dalje</string>
+    <string name="hint_nickname">Nadimak</string>
+    <string name="lbl_set_nickname">Molimo unesite svoj nadimak:</string>
+    <string name="game_finished_draw">Igra je završila nerješeno</string>
+    <string name="game_winner">Pobjednik je %1$s</string>
+</resources>

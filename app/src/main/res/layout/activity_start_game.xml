@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="16dp">
+
+    <com.google.android.material.button.MaterialButton android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:id="@+id/singlePlayerMode"
+                                                       android:text="@string/mode_single_player"/>
+
+    <com.google.android.material.button.MaterialButton android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:id="@+id/twoPlayersOffline"
+                                                       android:text="@string/mode__2_players_offline"/>
+
+    <com.google.android.material.button.MaterialButton android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:id="@+id/twoPlayersOnline"
+                                                       android:text="@string/mode__2_players_online"/>
+
+    <androidx.appcompat.widget.AppCompatTextView android:layout_width="wrap_content"
+                                                 android:layout_height="wrap_content"
+                                                 android:text="@string/title_leaderboard"
+                                                 android:layout_marginTop="24dp"
+                                                 android:id="@+id/leaderboardTitle"
+                                                 android:textSize="18sp"
+                                                 android:textColor="@color/textColorPrimary"/>
+
+    <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
+                                               android:layout_height="wrap_content"
+                                               android:id="@+id/listView"
+                                               android:layout_marginTop="4dp"/>
+
+</LinearLayout>

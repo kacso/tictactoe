@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       app:layout_constraintStart_toStartOf="parent"
+                                                       app:layout_constraintTop_toTopOf="parent"
+                                                       android:id="@+id/playerInfoHolder">
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintEnd_toStartOf="@id/currentPlayerIcon"
+                      android:orientation="vertical"
+                      android:id="@+id/player1Holder">
+            <androidx.appcompat.widget.AppCompatTextView android:layout_width="match_parent"
+                                                         android:layout_height="wrap_content"
+                                                         android:id="@+id/player1User"
+                                                         android:layout_marginEnd="4dp"
+                                                         android:textSize="14sp"
+                                                         android:textColor="@color/textColorPlayer1"
+                                                         android:gravity="start"
+                                                         tools:text="someone@something.com"/>
+
+            <androidx.appcompat.widget.AppCompatTextView android:layout_width="match_parent"
+                                                         android:layout_height="wrap_content"
+                                                         android:gravity="start"
+                                                         android:id="@+id/player1Results"
+                                                         android:textSize="14sp"
+                                                         android:textColor="@color/textColorPlayer1"
+                                                         tools:text="55W 12D 22L"/>
+        </LinearLayout>
+
+        <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toTopOf="@id/player1Holder"
+                   app:layout_constraintBottom_toBottomOf="@id/player1Holder"
+                   android:id="@+id/currentPlayerIcon"
+                   tools:srcCompat="@drawable/arrow_left_bold"/>
+
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintStart_toEndOf="@id/currentPlayerIcon"
+                      android:orientation="vertical"
+                      android:id="@+id/player2Holder">
+            <androidx.appcompat.widget.AppCompatTextView android:layout_width="match_parent"
+                                                         android:layout_height="wrap_content"
+                                                         android:id="@+id/player2User"
+                                                         android:layout_marginEnd="4dp"
+                                                         android:textSize="14sp"
+                                                         android:textColor="@color/textColorPlayer2"
+                                                         android:gravity="end"
+                                                         tools:text="someone@something.com"/>
+
+            <androidx.appcompat.widget.AppCompatTextView android:layout_width="match_parent"
+                                                         android:layout_height="wrap_content"
+                                                         android:gravity="end"
+                                                         android:id="@+id/player2Results"
+                                                         android:textSize="14sp"
+                                                         android:textColor="@color/textColorPlayer2"
+                                                         tools:text="55W 12D 22L"/>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="470dp"
+            app:layout_constraintTop_toBottomOf="@id/playerInfoHolder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:columnCount="3"
+            app:rowCount="3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_1_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_rowWeight="1">
+            <View android:layout_width="match_parent" android:layout_height="2dp"
+                  android:background="@color/textColorSecondary"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"/>
+            <View android:layout_width="2dp" android:layout_height="match_parent"
+                  android:background="@color/textColorSecondary"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@drawable/ic_launcher"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_1_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_rowWeight="1">
+
+            <View android:layout_width="match_parent" android:layout_height="2dp"
+                  android:background="@color/textColorSecondary"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"/>
+            <View android:layout_width="2dp" android:layout_height="match_parent"
+                  android:background="@color/textColorSecondary"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_1_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@drawable/ic_launcher"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_1_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_rowWeight="1">
+
+            <View android:layout_width="match_parent" android:layout_height="2dp"
+                  android:background="@color/textColorSecondary"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_1_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@drawable/ic_launcher"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_2_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_rowWeight="1">
+
+            <View android:layout_width="match_parent" android:layout_height="2dp"
+                  android:background="@color/textColorSecondary"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"/>
+            <View android:layout_width="2dp" android:layout_height="match_parent"
+                  android:background="@color/textColorSecondary"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_2_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@drawable/ic_launcher"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_2_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+            <View android:layout_width="match_parent" android:layout_height="2dp"
+                  android:background="@color/textColorSecondary"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"/>
+            <View android:layout_width="2dp" android:layout_height="match_parent"
+                  android:background="@color/textColorSecondary"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_2_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@drawable/ic_launcher"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_2_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_rowWeight="1">
+
+            <View android:layout_width="match_parent" android:layout_height="2dp"
+                  android:background="@color/textColorSecondary"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_2_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@drawable/ic_launcher"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_3_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+            <View android:layout_width="2dp" android:layout_height="match_parent"
+                  android:background="@color/textColorSecondary"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_3_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@drawable/ic_launcher"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_3_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_rowWeight="1">
+
+            <View android:layout_width="2dp" android:layout_height="match_parent"
+                  android:background="@color/textColorSecondary"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_3_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@drawable/ic_launcher"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_3_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_rowWeight="1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_3_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@drawable/ic_launcher"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.gridlayout.widget.GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
