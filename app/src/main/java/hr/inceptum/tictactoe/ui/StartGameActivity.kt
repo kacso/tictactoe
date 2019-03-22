@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
@@ -95,7 +96,6 @@ class StartGameActivity : AppCompatActivity() {
 
     private fun initListeners() {
         //TODO uncomment this
-        /*
         singlePlayerMode.setOnClickListener {
             //This will be triggered when user taps on single player button
             GameActivity.start(this, GameActivity.SINGLE_PLAYER_MODE)
@@ -109,7 +109,7 @@ class StartGameActivity : AppCompatActivity() {
             //This will be triggered when user taps on two players online button
             startOnlineGame()
         }
-        */
+
     }
 
     /**
